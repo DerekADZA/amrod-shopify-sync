@@ -1,0 +1,40 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Logs and runtime output
+*.log
+logs/
+*.json.bak
+
+# Data dumps and internal notes — never commit
+*.txt
+*.pdf
+*.mht
+*.xlsx
+*.csv
+*.bak
+*.backup
+AGENT.md
+CLAUDE_CODE_BRIEF.md
+HANDOFF.md
+debug*
+*chat*.txt
+*dump*.txt
+*export*.txt
+.claude/
+
+# Data samples and internal docs
+*.docx
+*.backup.js
+amrod_*.json
+prices_*.json
+stock_*.json
+catalog_*.json
+menu*.json
+shopify_collections.json
+
+*.zip

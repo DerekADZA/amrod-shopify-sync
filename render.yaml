@@ -1,0 +1,28 @@
+services:
+  # Daily Sync Cron Job
+  - type: cron
+    name: amrod-daily-sync
+    env: node
+    plan: starter
+    schedule: "0 3 * * *"  # Run at 3 AM UTC daily
+    buildCommand: npm install
+    startCommand: node daily-sync.js
+    envVars:
+      - key: SHOPIFY_STORE_URL
+        sync: false
+      - key: SHOPIFY_ADMIN_API_TOKEN
+        sync: false
+      - key: SHOPIFY_API_VERSION
+        value: "2025-07"
+      - key: SHOPIFY_LOCATION_ID
+        sync: false
+      - key: AMROD_EMAIL
+        sync: false
+      - key: AMROD_PASSWORD
+        sync: false
+      - key: AMROD_CUSTOMER_CODE
+        sync: false
+      - key: MARKUP
+        value: "0.43"
+      - key: DRY_RUN
+        value: "false"
